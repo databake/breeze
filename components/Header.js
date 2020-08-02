@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import {Box, Flex, IconButton, useColorMode, InputGroup, InputLeftElement, Input, Icon} from '@chakra-ui/core';
+import {Box, Flex, IconButton, useColorMode, InputGroup, InputLeftElement, Input, Icon, Text} from '@chakra-ui/core';
 import {jsx} from '@emotion/core';
 import {useState, useEffect, useRef} from 'react';
 
 import MobileNav from './MobileNav';
-import Logo from './Logo';
+// import Logo from './NewLogo';
 
 const useKeyPress = (targetKey) => {
     const [keyPressed, setKeyPressed] = useState(false);
@@ -61,8 +61,11 @@ const Header = (props) => {
         >
             <Box width="full" mx="auto" px={6} pr={[1, 6]} height="100%">
                 <Flex size="100%" p={[0, 6]} pl={[0, 4]} align="center" justify="space-between">
-                    <Box as="a" d="block" href="/" aria-label="daydrink, Back to homepage">
-                        <Logo w="100px" />
+                    <Box as="a" d="block" href="/" aria-label="breezer, Back to homepage">
+                        {/*<Logo w="100px" />*/}
+                        <Text w="100px" color="teal.600">
+                            BREE2ER
+                        </Text>
                     </Box>
                     <InputGroup display={['none', null, !hideSearch && 'block']} width="100%" ml={16} mr={16}>
                         <InputLeftElement children={<Icon name="search" color="gray.500" />} />
